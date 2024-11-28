@@ -8,13 +8,13 @@ import com.facebook.react.ReactNativeHost
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.JavaScriptExecutorFactory
 import com.facebook.react.bridge.ReactContext
+import com.facebook.react.defaults.DefaultReactNativeHost
 import java.lang.reflect.Method
 
 open class ReactNativeHostWrapperBase(
   application: Application,
   protected val host: ReactNativeHost
-) : ReactNativeHost(application) {
-  // TODO: Inherit from DefaultReactNativeHost when we drop SDK 49 support
+) : DefaultReactNativeHost(application) {
 
   val reactNativeHostHandlers = ExpoModulesPackage.packageList
     .flatMap { it.createReactNativeHostHandlers(application) }
@@ -51,6 +51,7 @@ open class ReactNativeHostWrapperBase(
       .firstOrNull() ?: invokeDelegateMethod("getJavaScriptExecutorFactory")
   }
 
+  // TODO vonovak could be removed?
   public override fun getJSMainModuleName(): String {
     return invokeDelegateMethod("getJSMainModuleName")
   }
@@ -73,6 +74,7 @@ open class ReactNativeHostWrapperBase(
       .firstOrNull() ?: host.useDeveloperSupport
   }
 
+  // TODO vonovak could be removed?
   public override fun getPackages(): MutableList<ReactPackage> {
     return invokeDelegateMethod("getPackages")
   }
