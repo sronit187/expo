@@ -87,7 +87,8 @@ public class DevMenuPreferences: Module {
    */
   static var showsAtLaunch: Bool {
     get {
-      return DevMenuTestInterceptorManager.interceptor?.shouldShowAtLaunch ?? boolForKey(showsAtLaunchKey)
+			return false
+//      return DevMenuTestInterceptorManager.interceptor?.shouldShowAtLaunch ?? boolForKey(showsAtLaunchKey)
     }
     set {
       setBool(newValue, forKey: showsAtLaunchKey)
@@ -101,7 +102,7 @@ public class DevMenuPreferences: Module {
    */
   public static var isOnboardingFinished: Bool {
     get {
-      return DevMenuTestInterceptorManager.interceptor?.isOnboardingFinishedKey ?? boolForKey(isOnboardingFinishedKey)
+      return true//DevMenuTestInterceptorManager.interceptor?.isOnboardingFinishedKey ?? boolForKey(isOnboardingFinishedKey)
     }
     set {
       setBool(newValue, forKey: isOnboardingFinishedKey)

@@ -9,7 +9,7 @@ import MonoTextWithCountdown from '../../components/MonoTextWithCountdown';
 const STRING_TRIM_THRESHOLD = 100;
 
 // TODO: (barthap): Remove this once we removed the listener wrapper from `Clipboard.ts`
-LogBox.ignoreLogs([/The 'content' property of the clipboard event is deprecated/]);
+// LogBox.ignoreLogs([/The 'content' property of the clipboard event is deprecated/]);
 
 export default function ClipboardListenerDemo() {
   const isSupported = useMemo(() => isCurrentPlatformSupported(['ios', 'android']), []);

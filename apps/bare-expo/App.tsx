@@ -1,6 +1,7 @@
 import { ThemeProvider } from 'ThemeProvider';
 import * as Splashscreen from 'expo-splash-screen';
 import React from 'react';
+import TestSuite from 'test-suite/AppNavigator';
 
 import MainNavigator, { optionalRequire } from './MainNavigator';
 
@@ -65,4 +66,9 @@ export default function Main() {
   const isLoaded = useLoaded();
 
   return <ThemeProvider>{isLoaded ? <MainNavigator /> : null}</ThemeProvider>;
+  // return (
+  //   <ThemeProvider>
+  //     <TestSuite />
+  //   </ThemeProvider>
+  // );
 }
