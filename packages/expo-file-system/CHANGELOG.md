@@ -13,6 +13,8 @@
 
 ### 💡 Others
 
+- [android] Bump `commons-io` to `2.7`.
+
 ## 18.0.5 - 2024-12-10
 
 ### 🐛 Bug fixes

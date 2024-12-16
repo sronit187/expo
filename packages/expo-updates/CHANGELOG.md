@@ -14,6 +14,7 @@
 
 ### 🐛 Bug fixes
 
+- [android] Downgrade `commons-io` to `2.7`.
 - Fix black screen appearing instead of the splashscreen on launch. ([#33432](https://github.com/expo/expo/pull/33432) by [@alanjhughes](https://github.com/alanjhughes))
 
 ## 0.26.9 — 2024-11-22
