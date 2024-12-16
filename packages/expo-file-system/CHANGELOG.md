@@ -13,7 +13,7 @@
 
 ### 💡 Others
 
-- [android] Bump `commons-io` to `2.7`.
+- [android] Bump `commons-io` to `2.7`. ([#33694](https://github.com/expo/expo/pull/33694) by [@aleqsio](https://github.com/aleqsio))
 
 ## 18.0.5 - 2024-12-10
 
