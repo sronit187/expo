@@ -261,9 +261,11 @@ class AudioModule : Module() {
       }
 
       Function("replace") { ref: AudioPlayer, source: AudioSource ->
-        if (ref.player.availableCommands.contains(Player.COMMAND_CHANGE_MEDIA_ITEMS)) {
-          val mediaSource = createMediaItem(source)
-          ref.player.replaceMediaItem(0, mediaSource.mediaItem)
+        appContext.mainQueue.launch {
+          if (ref.player.availableCommands.contains(Player.COMMAND_CHANGE_MEDIA_ITEMS)) {
+            val mediaSource = createMediaItem(source)
+            ref.player.replaceMediaItem(0, mediaSource.mediaItem)
+          }
         }
       }
 
